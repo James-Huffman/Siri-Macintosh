@@ -58,10 +58,6 @@ class SiriProxy::Plugin::Macintosh < SiriProxy::Plugin
 	system("osascript -e 'tell application \"iTunes\" to quit'");
 	end
 
-
-    def play_random_song
-    
-    end
     def itunes_next
     
     system("osascript -e 'tell application \"iTunes\" to next track'");
