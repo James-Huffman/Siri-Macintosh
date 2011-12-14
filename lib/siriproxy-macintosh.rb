@@ -101,7 +101,7 @@ def set_battery_status
 ## BATTERY ##
  system("ioreg -l | grep Capacity > ~/Desktop/test.txt");
 
-fileBattery = get_file_as_string '/Users/loris1634/Desktop/test.txt'  ## CHANGE 'LORIS1634' BY THE USERNAME YOU ARE LOGGED IN ON YOUR MAC
+fileBattery = get_file_as_string '~/Desktop/test.txt'  ## CHANGE 'LORIS1634' BY THE USERNAME YOU ARE LOGGED IN ON YOUR MAC
 fileBattery2MAX = fileBattery.scan(/\d+/)[0]
 fileBattery2Current = fileBattery.scan(/\d+/)[1]
 
@@ -117,7 +117,7 @@ say "Il reste #{pourcentageBATTERY} pourcents de batterie sur votre Mac."
 
 system("ioreg -w0 -l | grep \"ExternalConnected\" > ~/Desktop/test2.txt");
 
-filePowered = get_file_as_string '/Users/loris1634/Desktop/test2.txt'  ## CHANGE 'LORIS1634' BY THE USERNAME YOU ARE LOGGED IN ON YOUR MAC
+filePowered = get_file_as_string '~/Desktop/test2.txt'  ## CHANGE 'LORIS1634' BY THE USERNAME YOU ARE LOGGED IN ON YOUR MAC
 
 if filePowered.include? "No"
 say "Votre Mac n'est pas branche au secteur"
